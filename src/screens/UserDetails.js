@@ -25,20 +25,16 @@ const UserDetails = ({ navigation }) => {
         style={styles.map}
         provider={MapView.PROVIDER_GOOGLE}
         initialRegion={{
-          latitude: 50.4501,
-          // latitude: parseFloat(user.address.geo.lat),
-          longitude: 30.5234,
-          // longitude: parseFloat(user.address.geo.lng),
+          latitude: parseFloat(user.address.geo.lat),
+          longitude: parseFloat(user.address.geo.lng),
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
       >
         <Marker
           coordinate={{
-            latitude: 50.4501,
-            // latitude: parseFloat(user.address.geo.lat),
-            longitude: 30.5234,
-            // longitude: parseFloat(user.address.geo.lng),
+            latitude: parseFloat(user.address.geo.lat),
+            longitude: parseFloat(user.address.geo.lng),
           }}
           title={user.address.city}
           description={user.address.street}
